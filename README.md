@@ -35,5 +35,5 @@ Es un proyecto grande a largo plazo con muchas expectativas. Es solo un experime
 ### Pasos
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/Zenxxl/Motor3D.git
-   cd Motor3D
+   git clone https://github.com/Zenxxl/OpenWorldEngine.git
+   cd OpenWorldEngine
