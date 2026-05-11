@@ -1,0 +1,40 @@
+# Build results
+x64/
+x86/
+Debug/
+Release/
+bin/
+obj/
+*.exe
+*.dll
+*.lib
+*.pdb
+*.ilk
+*.log
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Project files generados automáticamente
+*.vcxproj.*
+*.vcproj.*
+*.aps
+*.ncb
+*.opendb
+*.idb
+
+# Archivos temporales
+*.tmp
+*.bak
+*.cache
+*.o
+*.out
+
+# Archivos de configuración locales
+*.db
+*.DS_Store
+Thumbs.db

@@ -1,0 +1,50 @@
+Package: vcpkg-cmake-config
+Version: 2024-05-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 5aa31c9fb71cf481eb0292e45a80e551c9b1879431d51a3b6452f55d4d221d85
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2024-04-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 7d1a130680122930d8d447641c998f563130d4371635c68249a079a92327ddfb
+Status: install ok installed
+
+Package: directxmath
+Version: 2026-03-12
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 974466f8aeb6e1d63e83e3b8a1ef2312aff77b380fcf95bbdf35d120705bb667
+Description: DirectXMath SIMD C++ math library
+Status: install ok installed
+
+Package: directxtk
+Version: 2026-03-31
+Depends: directxmath, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: a2bda375d629c63b5d4d7d5ad690b0e9b1b15c085245800da758f3bf1a2dc3ef
+Description: A collection of helper classes for writing DirectX 11.x code in C++.
+Status: install ok installed
+
+Package: vcpkg-cmake-get-vars
+Version: 2025-05-29
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: bdd6804bb7cdbcdd56bc6a0a0407010de9f3c0a339d78850598d0e6793493913
+Status: install ok installed
+
+Package: physx
+Version: 5.5.0
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config, vcpkg-cmake-get-vars
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 2c184881197ebcc5a219ae3e811519da33f8cf8719d98fd59b6d5204c5e0b497
+Description: The NVIDIA PhysX SDK is a scalable multi-platform physics solution supporting a wide range of devices, from smartphones to high-end multicore CPUs and GPUs. This is the latest NVIDIA official version of the PhysX engine which also directly integrates into Omniverse. This port is NOT officially supported by NVIDIA.
+Status: install ok installed
+

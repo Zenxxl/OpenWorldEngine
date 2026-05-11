@@ -1,0 +1,11 @@
+{
+  "name": "motor3d",
+  "version-string": "0.1.0",
+  "dependencies": [
+    "physx",
+    "directxtk",
+    "directxmath"
+  ],
+  "overrides": [],
+  "builtin-baseline": "73248d88e09d43dfd7836902462a64fd2a43387b"
+}
