@@ -23,7 +23,6 @@
     <ClCompile Include="PhysicsSystem.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="src\Core\Logger.cpp" />
-    <ClCompile Include="src\Debug\DebugDraw.cpp" />
     <ClCompile Include="src\ECS\ECS.cpp" />
     <ClCompile Include="src\Graphics\Camera.cpp" />
     <ClCompile Include="src\Input\InputSystem.cpp" />
@@ -35,7 +34,7 @@
     <ClInclude Include="PhysicsSystem.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="src\Core\Logger.h" />
-    <ClInclude Include="src\Debug\DebugDraw.h" />
+    <ClInclude Include="src\DebugDraw.h" />
     <ClInclude Include="src\ECS\ECS.h" />
     <ClInclude Include="src\Graphics\Camera.h" />
     <ClInclude Include="src\Input\InputSystem.h" />

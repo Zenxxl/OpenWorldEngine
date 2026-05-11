@@ -28,6 +28,7 @@ bool Renderer::Initialize(HWND hWnd, int width, int height) {
     context->OMSetRenderTargets(1, &rtv, nullptr);
     D3D11_VIEWPORT vp = { 0, 0, (float)width, (float)height, 0.0f, 1.0f };
     context->RSSetViewports(1, &vp);
+	OutputDebugStringA("Renderer inicializado correctamente.\n");
     return true;
 }
 
