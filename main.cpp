@@ -26,6 +26,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow) {
     if (!physics.Initialize()) {
         return 0;
     }
+
+	OutputDebugStringA("Motor3D iniciado correctamente.\n");
+
     // Loop principal
     MSG msg = {};
     while (msg.message != WM_QUIT) {
