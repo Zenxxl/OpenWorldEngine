@@ -22,6 +22,7 @@ Es un proyecto grande a largo plazo con muchas expectativas. Es solo un experime
 
 ### Requisitos
 - **Visual Studio Community 2026**  
+- **Es posible q le proyecto migre a vs code**
 - **Windows 10/11**  
 - **vcpkg** instalado y configurado  
 
