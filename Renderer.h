@@ -11,6 +11,11 @@ public:
     void BeginFrame();
     void EndFrame();
     void Shutdown();
+
+    // Expose device/context for other subsystems (read-only)
+    ID3D11Device* GetDevice() const { return device; }
+    ID3D11DeviceContext* GetContext() const { return context; }
+
 private:
     ID3D11Device* device = nullptr;
     ID3D11DeviceContext* context = nullptr;

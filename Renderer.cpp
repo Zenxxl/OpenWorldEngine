@@ -27,9 +27,16 @@ bool Renderer::Initialize(HWND hWnd, int width, int height) {
     backBuffer->Release();
     context->OMSetRenderTargets(1, &rtv, nullptr);
     D3D11_VIEWPORT vp = { 0, 0, (float)width, (float)height, 0.0f, 1.0f };
-    context->RSSetViewports(1, &vp);
+	context->RSSetViewports(1, &vp);
 	OutputDebugStringA("Renderer inicializado correctamente.\n");
-    return true;
+
+	// Initialize GpuResources with device/context
+	extern void InitGpuResources(ID3D11Device*, ID3D11DeviceContext*);
+	InitGpuResources(device, context);
+
+	OutputDebugStringA("GpuResources inicializados.\n");
+
+	return true;
 }
 
 void Renderer::BeginFrame() {

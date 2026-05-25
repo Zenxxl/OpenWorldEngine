@@ -5,6 +5,9 @@
 #pragma comment(lib, "d3d11.lib")
 
 #include "Renderer.h"
+#include "src/Graphics/GpuResourcesBridge.h"
+#include "src/Graphics/ForwardRenderer.h"
+#include "src/Graphics/Camera.h"
 #include "PhysicsSystem.h"
 
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
@@ -29,6 +32,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow) {
 
 	OutputDebugStringA("Motor3D iniciado correctamente.\n");
 
+    // Setup forward renderer
+    Motor3D::Graphics::ForwardRenderer forward;
+    forward.Initialize(renderer.GetDevice(), renderer.GetContext(), 1280, 720);
+
+    // Temporary camera for test
+    Motor3D::Graphics::Camera camera;
+    camera.SetPosition(0.0f, 0.0f, -5.0f);
+
     // Loop principal
     MSG msg = {};
     while (msg.message != WM_QUIT) {
@@ -37,11 +48,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow) {
             DispatchMessage(&msg);
         } else {
             renderer.BeginFrame();
+            forward.Render(camera);
             // Aquí irá el renderizado de la escena y la simulación física
             renderer.EndFrame();
         }
     }
+    forward.Shutdown();
     physics.Shutdown();
+    ShutdownGpuResources();
     renderer.Shutdown();
     UnregisterClass(wc.lpszClassName, wc.hInstance);
     return 0;
